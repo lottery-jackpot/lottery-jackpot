@@ -273,10 +273,11 @@ def get_model(args, logger):
     print("=> Creating model '{}'".format(args.arch))
     model = models.__dict__[args.arch]().to(device)
     ckpt = torch.load(args.pretrained_model, map_location=device)
-    fc_weight = ckpt['fc.weight']
-    ckpt['fc.weight'] = fc_weight.view(
-        fc_weight.size(0), fc_weight.size(1), 1, 1)
-    model.load_state_dict(ckpt, strict=False)
+    model = nn.DataParallel(model)
+    model.load_state_dict(ckpt['state_dict'],strict=False)
+    model_state_dict = model.module.state_dict() 
+    model = models.__dict__[args.arch]().to(device)
+    model.load_state_dict(model_state_dict)
 
     # applying sparsity to the network
     pr_cfg = generate_pr_cfg(model)
