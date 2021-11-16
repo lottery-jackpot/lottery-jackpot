@@ -49,7 +49,7 @@ We provide configuration, training logs, and pruned models reported in the paper
 | ResNet-50 | ImageNet  | 80%      | 30(S)       | 75.19%     | [link](https://drive.google.com/drive/folders/1s0Ar5VamRndGj06hrMzPLz5WHaqehqTf?usp=sharing) |
 | ResNet-50 | ImageNet  | 80%      | 30(S)+10(T) | 76.66%     | [link](https://drive.google.com/drive/folders/1egmfGG4zPmuAsTmZTeTJ_ZhGkZEt7d_n?usp=sharing) |
 | ResNet-50 | ImageNet  | 90%      | 30(S)       | 72.43%     | [link](https://drive.google.com/drive/folders/1Ws5qjQrSeEYeOf2UhIdEmgQO04O5LwUa?usp=sharing) |
-| ResNet-50 | ImageNet  | 90%      | 30(S)+10(T) | 72.62%     | [link](https://drive.google.com/drive/folders/1wTzyDKr6_PW3ty2wsiZXT-iS5EFsEpzb?usp=sharing) |
+| ResNet-50 | ImageNet  | 90%      | 30(S)+10(T) | 74.62%     | [link](https://drive.google.com/drive/folders/1wTzyDKr6_PW3ty2wsiZXT-iS5EFsEpzb?usp=sharing) |
 
 To test our pruned models, download the pruned models and place them in the `ckpt` folder.
 
