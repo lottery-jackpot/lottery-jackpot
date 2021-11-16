@@ -6,7 +6,7 @@ import yaml
 
 from configs import parser as _parser
 
-parser = argparse.ArgumentParser(description='Lottery Jackpots Exsit in Pre-trained Model')
+parser = argparse.ArgumentParser(description='Efficient Weight Pruning using Pre-trained Lottery Jackpots ')
 
 parser.add_argument(    
     "--config", 
@@ -47,6 +47,13 @@ parser.add_argument(
 	type=str,
 	default='/pre-train/vgg19_cifar10.pt',
 	help='Path of the pre-trained model',
+)
+
+parser.add_argument(
+    '--jackpot_model',
+    type=str,
+    default='',
+    help='Path of the searched jackpot model',
 )
 
 parser.add_argument(
